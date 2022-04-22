@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="calendar.css" />
+    <title>My First Website</title>
+  </head>
+  <body>
+    <main><p class="main-title">THIS IS THE MAIN PAGE!</p></main>
+
+    <h1 class="sub-title">Video</h1>
+    <video
+      src="https://www.youtube.com/watch?v=TdqQqyc7pfU"
+      width="400"
+      controls
+      loop
+    >
+      your brower does not support the <code>Video</code>
+    </video>
+
+    <h1 class="sub-title">Audio</h1>
+    <audio
+      src="https://www.youtube.com/watch?v=MijW2PqR0S0&list=TLPQMDQwNDIwMjJP-ZAEAuLmkA&index=6#t=0:30"
+      controls
+    >
+      Fallout 4 - The end of the world - But at 30 seconds
+    </audio>
+
+    <h1 class="sub-title">Table</h1>
+    <table border="2">
+      <tr>
+        <th>Row 1</th>
+        <th>Row 2</th>
+        <th>Row 3</th>
+      </tr>
+      <tr aria-rowspan="2">
+        <td>One</td>
+        <td>Two</td>
+        <td>Three</td>
+      </tr>
+      <tr aria-rowspan="2">
+        <td>Four</td>
+        <td>Five</td>
+        <td>Six</td>
+      </tr>
+      <tr aria-rowspan="2">
+        <td>Seven</td>
+        <td>Eight</td>
+        <td>Nine</td>
+      </tr>
+    </table>
+
+    <h1 class="sub-title">Common block tag</h1>
+    <hr />
+    Horrizontal Line
+    <address>173 6th Ave SW</address>
+    <blockquote>"Four scores and 7 years ago"</blockquote>
+    <details>
+      <summary class="short-desc">Quote by Abraham Lincoln</summary>
+      <p class="quote">
+        The president Blah Di Blah DI Blah, and something, something, something!
+      </p>
+    </details>
+
+    <h1 class="sub-title">Common inline tag</h1>
+    <span>Span is just a regular plain text</span><br />
+    <cite> for citing sauce: https://www.youtube.com/watch?v=TdqQqyc7pfU</cite
+    ><br />
+    <abbr
+      title=" for abberviation like days of the week: Mo, Tues, Wed, etc..."
+    ></abbr
+    ><br />
+    <time> for time tag: 10:00 pm</time><br />
+    <code> for identifying code fragment like img or h1</code><br />
+
+    <h1 class="sub-title">
+      Tags that needs to work with other module like javascript
+    </h1>
+    <button>Click me!</button><br />
+    <label for="malware">Installing Metal gear Rising</label>
+    <meter id="malware" value="2" min="0" , max="10">
+      2 out of 10 files downloaded</meter
+    ><br />
+    <label for="anti-virus">Norton Purging Malware</label>
+    <progress id="anti-virus" value="32" min="100">32%</progress><br />
+    <span>A webpage within a webpage!</span><br />
+    <iframe
+      src="http://127.0.0.1:5500/CalendarMarkII/index.html"
+      frameborder="6"
+      title="He actually did it!"
+    ></iframe
+    ><br />
+    <br />
+    <bdo dir="rtl"> This text will go right-to-left</bdo>
+    <bdo dir="ltr"> This text will go left-to-right</bdo><br />
+    <map name=""></map>
+
+    <h1 class="calendar-title">CalendarMarkII</h1>
+    <br />
+
+    <div class="calendar-project">
+      <div class="calendar-container-whole">
+        <div class="month-container">
+          <div class="left-arrow-container">
+            <i class="arrow left" onclick="changeMonthLeft()"></i>
+          </div>
+          <span class="month-title"></span>
+          <div class="right-arrow-container">
+            <i class="arrow right" onclick="changeMonthRight()"></i>
+          </div>
+        </div>
+
+        <div class="calendar-container-inside">
+          <div id="day-of-the-week" class="day-of-the-week"></div>
+          <div class="date-slot"></div>
+        </div>
+      </div>
+
+      <div id="information-center" class="information-center">
+        <div class="information-title">Information Center</div>
+        <div class="today-date-container">
+          <div class="today-date-header">Today's date</div>
+          <div id="local-time" class="today-date"></div>
+        </div>
+
+        <div class="clicked-date-container">
+          <div class="clicked-date-header">Clicked date</div>
+          <div id="input-date" class="Clicked-date"></div>
+        </div>
+
+        <div class="time-container">
+          <div class="time-header">Current time</div>
+          <div id="time-display" class="time-display"></div>
+        </div>
+
+        <div class="event-container">
+          <div class="event-header">Event added</div>
+          <div id="event-adder" class="event-adder"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./calendar.js"></script>
+
+    <footer>
+      <p>Think of a more interesting footer</p>
+    </footer>
+  </body>
+</html>
+
+<!-- <div id="myCalendar"></div>
+
+<script>
+  initCalendar("myCalendar", {
+    events: [
+      {
+        10, 10, 2020,
+        callback: () => {
+          alert('100');
+        }
+      }
+    ]
+  });
+</script> -->
